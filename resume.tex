@@ -1,0 +1,98 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res} 
+\usepackage{fancyhdr}
+
+% the margin option causes section titles to appear to the left of body text 
+\textwidth=5.2in % increase textwidth to get smaller right margin
+
+\begin{document} 
+ 
+\hspace{-4cm} \name{Ryan P. Kelly\\[12pt]} % the \\[12pt] adds a blank line after name
+ 
+\address{{\bf Present Address} \\ PO Box 126533 \\ Atlanta, GA 30322  \\
+        (845) 222-5529 }
+\address{{\bf Permanent Address} \\ 6 Park Avenue \\ Sloatsburg, NY 10974 \\
+        (845) 712-5143 }
+
+ 
+\begin{resume} 
+ 
+\section{Objective} 
+Innovative Web-centric Solutions
+
+\section{Education} 
+BBA in Finance, Goizueta Business School, Atlanta, GA, Expected May 2010 \\
+BS in Computer Science, Emory University, Atlanta, GA, Expected May 2010 \\
+GPA 4.0
+ 
+
+\section{Experience}
+ {\bf Research Assistant,} Emory University, Atlanta, GA \hfill May 2008 - Current
+ \begin{itemize} \itemsep -2pt  % reduce space between items
+ \item Created a web-based system to facilitate automatic search evaluation
+                 for Emory University Libraries
+ \item Authored a Java applet to aid in the early diagnosis of Alzheimer's
+                 using a preferential looking task
+ \end{itemize}
+
+ 
+ 
+{\bf Associate,} HMSHost Corporation, Sloatsburg, NY \hfill  June 2005 - Current
+\begin{itemize} \itemsep -2pt %reduce space between items
+\item Worked as a Barista at their franchised Starbucks location 
+\item Responsible for testing and control of products
+\item Responsible for live training of new employees 
+\end{itemize}
+
+\section{Leadership Activities} 
+{\bf Secretary,} Phi Delta Theta Fraternity     \hfill 2009
+    \begin{itemize} \itemsep -2pt
+    \item Responsible for coordination and review of fraternity documents
+              for submission to fraternity and university officials
+    \item Responsible for written content on the fraternity's website
+    \end{itemize}
+
+{\bf Awards Committee Chair,} Phi Delta Theta Fraternity \hfill 2008 
+    \begin{itemize} \itemsep -2pt
+    \item  Responsible for nomination of individuals and the
+                chapter at large for university and fraternity
+                awards 
+    \item Helped the chapter win its first award in four years,
+                the Biggers Ritual Award
+    \item Worked actively with the Chapter Advisory Board to provide
+                direction to the fraternity to win awards in the future
+    \end{itemize}
+
+\section{Academic \\ Honors} 
+Dean's List, all semesters \\
+Chancellor's Award \\
+Distinguished Freshman Scholarship \\
+Airmont Rotary Scholarship \\
+Alumni Scholarship \\
+AP National Scholar \\
+AP Scholar with Distinction 
+
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+\section{Computer \\ Skills}
+\begin{tabular}{l p{3in}}
+\underline{Languages:} & C, Cilk, Java, JavaScript, Perl, PHP \\
+
+\underline{Software:} & PostgreSQL, MySQL, Excel, Calc, Eclipse,
+                        Vim, Emacs, Photoshop, ffmpeg, mencoder,
+                        mogrify
+\end{tabular}
+
+\vfill
+
+\begin{center}
+\hspace{-4cm} \bf \scriptsize Set with \LaTeX
+\end{center}
+
+\end{resume}
+
+\end{document} 
+
+
+
