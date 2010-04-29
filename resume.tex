@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+\geometry{letterpaper,tmargin=.75in,bmargin=.75in,lmargin=.75in,rmargin=.75in,headheight=0in,headsep=0in,footskip=.3in}
 
 \setlength{\parindent}{0in}
 \setlength{\parskip}{0in}
@@ -30,10 +30,10 @@
 
 % A ressection is a main section (<H1>Section</H1>)
 \newenvironment{ressection}[1]{
-	\vspace{4pt}
+	\vspace{1pt}
 	{\fontfamily{phv}\selectfont\Large#1}
 	\begin{itemize}
-	\vspace{3pt}
+	\vspace{1pt}
 }{
 	\end{itemize}
 }
@@ -46,8 +46,14 @@
 
 % A ressubitem is a simple list element in anything but a ressection (second level)
 \newcommand{\ressubitem}[1]{
-	\vspace{-1pt}
+	\vspace{-2pt}
 	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubsubitem is a simple list element in anything but a ressection (third level)
+\newcommand{\ressubsubitem}[1]{
+	\vspace{-2pt}
+    \begin{itemize} \item #1 \end{itemize}
 }
 
 % A resbigitem is a complex list element for stuff like jobs and education:
@@ -97,28 +103,24 @@
 
 \vspace{8 pt}
 
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Technologies:}
 
+    \begin{reslist}{Languages:}
+        \ressubitem{\textbf{Proficient:} Perl, Java, JavaScript, HTML, SQL}
+        \ressubitem{\textbf{Familiar:} Python, PHP, C, C\#}
+    \end{reslist}
 
+    \begin{reslist}{Systems:}
+        \ressubitem{\textbf{Admin:} Linux/UNIX (Solaris, Ubuntu), Windows (XP, Server 2003)}
+        \ressubitem{\textbf{User:} Linux/UNIX (Solaris, Ubuntu, Debian, Fedora), Mac (Classic, OSX), Windows (XP, 7, Server 2003/2008)}
+    \end{reslist}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Previous Positions:}
-
-	\begin{ressubsec}{LiveTechnology}{Tuxedo Park, NY}{Junior Systems Administrator: February 2010---Present}
-		\ressubitem{Transferring existing ISAPI extensions/filters to IIS 7}
-		\ressubitem{Creating scripts to monitor Windows Server 2000, 2003, and 2008 and installed applications}
-		\ressubitem{Setting up HTTP load-balancing and caching on IIS using ARR}
-	\end{ressubsec}
-
-	\begin{ressubsec}{Emory University}{Atlanta, GA}{Research Assistant, Department of Mathematics and Computer Science: May 2008---June 2009}
-		\ressubitem{Primary developer and administrator for EMU, Emory User Behavior Modeling System for Automatic Library Search Evaluation}
-		\ressubitem{EMU included analyzing Apache logs weekly (>10,000,000 records) and loading them into a relational database}
-		\ressubitem{EMU also included a web interface which allowed querying the data and playback of user sessions, reconstrcuted from the logs}
-		\ressubitem{Authored a Java applet for search behavior analysis}
-		\ressubitem{Authored a Java applet implementing a preferential looking task, for reasearch in detecting Alzheimer's }
-	\end{ressubsec}
+    \begin{reslist}{Tools:}
+       \ressubitem{Databases (PostgreSQL, MySQL), HTTP (Apache, Lighttpd), SCM (Git), Frameworks (jQuery, Catalyst, Moose), Monitoring (Nagios)} 
+    \end{reslist}
 
 \end{ressection}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Education:}
@@ -127,51 +129,55 @@
 		\ressubitem{GPA: 4.00}
 	\end{ressubsec}
 
-	\begin{ressubsec}{Pennsylvania State University}{University Park, PA}{Majoring in Business: August 2006---May 2007}
+	\begin{ressubsec}{Pennsylvania State University}{University Park, PA}{Majoring in Business: August 2006---May 2007 (Transferred)}
 		\ressubitem{GPA: 4.00}
 	\end{ressubsec}
 
 \end{ressection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Relevant Publications:}
+\begin{ressection}{Experience:}
 
-	\begin{ressubsec}{EMU: The Emory User Behavior Modeling System for Automated Search Evaluation}{JCDL}{June 2009}
-		\ressubitem{Publication describing the features and goals of EMU, as described above}
-		\ressubitem{Primary author of system, co-author on paper}
+	\begin{ressubsec}{LiveTechnology}{Tuxedo Park, NY}{Junior Systems Administrator: February 2010---Present}
+        \ressubitem{C\# application to automate static advertisement build testing}
+		\ressubitem{Custom Perl toolchain for interacting with proprietary hierarchical database}
+        \ressubsubitem{DBD library exposing the majority of the database functionality}
+        \ressubsubitem{Shell for interacting with the database, using Term::Shell and emulating a filesystem with special commands}
+    \end{ressubsec}
+
+	\begin{ressubsec}{Emory University}{Atlanta, GA}{Research Assistant, Department of Mathematics and Computer Science: May 2008---June 2009}
+        %emu
+		\ressubitem{Primary developer/administrator for EMU, Emory User Behavior Modeling System for Automatic Library Search Evaluation}
+        \ressubsubitem{Designed for library administrators to determine if users were finding materials}
+		\ressubsubitem{Reconstructed user sessions from log data so they could be replayed}
+        %sba
+		\ressubitem{Search behavior analysis Java applet, examining the effects of advertising on intent} 
+        %plt
+		\ressubitem{Preferential looking task Java applet, using the mouse cursor as a proxy for eye movement}
+        \ressubsubitem{Such activities had been shown to be useful in detecting deficiencies in memory, such as those associated with Alzheimer's}
+        %odt
+        \ressubitem{Orientation discrimination task Java applet, which tested executive function and attention span}
 	\end{ressubsec}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Publications:}
+
+    \resitem{EMU: The Emory User Behavior Modeling System for Automated Search Evaluation, JCDL, June 2009}
+    \resitem{Conscience, Morality and Justice: A Literary Perspective, Best of Freshman Writing, June 2007}
 	
 \end{ressection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Open Source:}
 
-	\begin{reslist}{Getopt::Flex:}
-		\ressubitem{Flexible option parsing module, written in Perl}
-		\ressubitem{http://search.cpan.org/perldoc?Getopt::Flex}
+	\begin{reslist}{Perl:}
+		\ressubitem{Getopt::Flex: Flexible option parsing, http://search.cpan.org/perldoc?Getopt::Flex}
+		\ressubitem{File::Find::Declare: Declarative file finding, http://search.cpan.org/perldoc?File::Find::Declare}
 	\end{reslist}
 
-	\begin{reslist}{File::Find::Declare:}
-		\ressubitem{Declarative file finding module, written in Perl}
-		\ressubitem{http://search.cpan.org/perldoc?File::Find::Declare}
-	\end{reslist}
-
-\end{ressection}
-
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Skills:}
-
-    \resitem{\textbf{Operating Systems:} Linux/UNIX (CentOS, Solaris, Debian), Mac OSX, Windows XP}
-
-	\begin{reslist}{Computer Languages:}
-		\ressubitem{Proficient in Perl, Java, PHP, HTML, JavaScript, SQL}
-		\ressubitem{Familiar with C, C++}
-	\end{reslist}
-
-	\begin{reslist}{Tools and Systems:}
-		\ressubitem{Proficient in PostgreSQL, Vim, MySQL, Eclipse, Git, jQuery, Catalyst}
-		\ressubitem{Familiar with Apache, Lighttpd, Make}
-	\end{reslist}
+    \resitem{\textbf{Other:} Browse my repositories on GitHub: http://github.com/f0rk}
 
 \end{ressection}
 
