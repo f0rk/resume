@@ -53,6 +53,7 @@
 \newcommand{\ressubsubitem}[1]{
 	\vspace{-2pt}
     \begin{itemize} \item #1 \end{itemize}
+	\vspace{-2pt}
 }
 
 % A resbigitem is a complex list element for stuff like jobs and education:
@@ -64,6 +65,7 @@
 	\item
 	\textbf{#1}, #2 \\
 	#3
+    \vspace{-1pt}
 }
 
 % This is a list that comes with a resbigitem
@@ -104,18 +106,46 @@
 \begin{ressection}{Technologies:}
 
     \begin{reslist}{Languages:}
-        \ressubitem{\textbf{Proficient:} Perl, Java, JavaScript, HTML, SQL}
-        \ressubitem{\textbf{Familiar:} Python, PHP, C, C\#}
+        \ressubitem{\textbf{Proficient:} Perl, Java, C\#, HTML, SQL}
+        \ressubitem{\textbf{Familiar:} Python, PHP, C, JavaScript}
     \end{reslist}
 
     \begin{reslist}{Systems:}
-        \ressubitem{\textbf{Admin:} Linux/UNIX (Solaris, Ubuntu), Windows (XP, Server 2003)}
+        \ressubitem{\textbf{Admin:} Linux/UNIX (Fedora, Debian, Ubuntu), Windows (XP, Server 2003)}
         \ressubitem{\textbf{User:} Linux/UNIX (Solaris, Ubuntu, Debian, Fedora), Mac (Classic, OSX), Windows (XP, 7, Server 2003/2008)}
     \end{reslist}
 
     \begin{reslist}{Tools:}
        \ressubitem{Databases (PostgreSQL, MySQL), HTTP (Apache, Lighttpd), SCM (Git, SVN), Frameworks (jQuery, Catalyst, Moose), Monitoring (Nagios)} 
     \end{reslist}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Experience:}
+
+	\begin{ressubsec}{LiveTechnology}{Tuxedo Park, NY}{Technical Operations Developer: February 2010---Present}
+        \ressubitem{C\# applications for testing and automation:}
+            \ressubsubitem{SOAP service frontends for asset manipulation and log querying}
+            \ressubsubitem{Windows services for log rotation and processing}
+		\ressubitem{Custom Perl toolchain for proprietary hierarchical database:}
+            \ressubsubitem{DBD library exposing the majority of the database functionality}
+            \ressubsubitem{Shell for interacting with the database, using Term::Shell and emulating a typed filesystem}
+        \ressubitem{General sysadmin duties: Automate, repair, replace, report, investigate, monitor, and backup Windows and Linux machines}
+    \end{ressubsec}
+
+	\begin{ressubsec}{Emory University}{Atlanta, GA}{Research Assistant, Department of Mathematics and Computer Science: May 2008---June 2009}
+        %emu
+		\ressubitem{Primary developer/administrator for EMU, Emory User Behavior Modeling System for Automatic Library Search Evaluation}
+        \ressubsubitem{Designed for library administrators to determine if users were finding materials}
+        %sba
+        \ressubitem{Various Java applets:}
+		\ressubsubitem{Search behavior analysis applet, examining the effects of advertising on intent} 
+        %plt
+		\ressubsubitem{Preferential looking task applet, for detecting deficiencies in memory}
+        %odt
+        \ressubsubitem{Orientation discrimination task applet, which tested executive function and attention span}
+	\end{ressubsec}
 
 \end{ressection}
 
@@ -128,33 +158,6 @@
 
 	\begin{ressubsec}{Pennsylvania State University}{University Park, PA}{Majoring in Business: August 2006---May 2007 (Transferred)}
 		\ressubitem{GPA: 4.00}
-	\end{ressubsec}
-
-\end{ressection}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Experience:}
-
-	\begin{ressubsec}{LiveTechnology}{Tuxedo Park, NY}{Technical Operations Developer: February 2010---Present}
-        \ressubitem{C\# application to automate static advertisement build testing}
-        \ressubitem{C\# applications to facilitate server log load-to-DB and rotation}
-		\ressubitem{Custom Perl toolchain for interacting with proprietary hierarchical database}
-        \ressubsubitem{DBD library exposing the majority of the database functionality}
-        \ressubsubitem{Shell for interacting with the database, using Term::Shell and emulating a filesystem with special commands}
-    \end{ressubsec}
-
-	\begin{ressubsec}{Emory University}{Atlanta, GA}{Research Assistant, Department of Mathematics and Computer Science: May 2008---June 2009}
-        %emu
-		\ressubitem{Primary developer/administrator for EMU, Emory User Behavior Modeling System for Automatic Library Search Evaluation}
-        \ressubsubitem{Designed for library administrators to determine if users were finding materials}
-		\ressubsubitem{Reconstructed user sessions from log data so they could be replayed}
-        %sba
-		\ressubitem{Search behavior analysis Java applet, examining the effects of advertising on intent} 
-        %plt
-		\ressubitem{Preferential looking task Java applet, using the mouse cursor as a proxy for eye movement}
-        \ressubsubitem{Such activities had been shown to be useful in detecting deficiencies in memory, such as those associated with Alzheimer's}
-        %odt
-        \ressubitem{Orientation discrimination task Java applet, which tested executive function and attention span}
 	\end{ressubsec}
 
 \end{ressection}
